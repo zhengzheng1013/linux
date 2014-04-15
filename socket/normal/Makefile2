@@ -1,0 +1,8 @@
+server : sig.o echo_server.o
+	gcc -o echo_server sig.o echo_server.o
+
+sig.o : util.o sig.c sig.h
+	gcc -c sig.c
+
+echo_server.o : echo_server.c
+	gcc -c echo_server.c
